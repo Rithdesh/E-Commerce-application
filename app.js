@@ -12,6 +12,7 @@ require('dotenv').config();
 
 app.use(bodyparser.json());
 app.use(express.json());
+app.use(cors());
 
 
 const dbURI = process.env.MONGODB_URI;
