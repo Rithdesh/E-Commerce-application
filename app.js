@@ -28,7 +28,12 @@ mongoose
 
 app.set("view engine","ejs");
 
-app.use("/",productRoutes,userRoutes,cartRoutes,orderRoutes);
+app.use("/product",productRoutes);
+app.use("/user",userRoutes);
+
+app.use("/cart",cartRoutes);
+
+app.use("/order",orderRoutes);
 app.listen(3000,()=>{
     console.log('Server is running on port 3000');
 })

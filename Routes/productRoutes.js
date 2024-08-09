@@ -4,7 +4,7 @@ const auth = require('../Middleware/auth')
 const router = express.Router();
 
 
-router.get("/products",auth, productController.getAllProducts);
+router.get("/products",productController.getAllProducts);
 router.post("/create",productController.createProducts)
 router.delete("/products/:id",productController.deletebyid)
 router.patch("/products/:id",productController.updateProductByid)
